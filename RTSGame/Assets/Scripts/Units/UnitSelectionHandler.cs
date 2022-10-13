@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 
 public class UnitSelectionHandler : MonoBehaviour
 {
-    [SerializeField] private LayerMask _layerMask = new LayerMask();
+    [SerializeField] private LayerMask layerMask = new LayerMask();
     
     private Camera _mainCamera;
 
-    private List<Unit> _selectedUnits = new List<Unit>();
+    public List<Unit> SelectedUnits { get; } = new List<Unit>();
 
     private void Start()
     {
@@ -21,12 +21,12 @@ public class UnitSelectionHandler : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            foreach (Unit selectedUnit in _selectedUnits)
+            foreach (Unit selectedUnit in SelectedUnits)
             {
                 selectedUnit.Deselect();
             }
             
-            _selectedUnits.Clear();
+            SelectedUnits.Clear();
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
@@ -38,15 +38,15 @@ public class UnitSelectionHandler : MonoBehaviour
     {
         Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, _layerMask)){return;}
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)){return;}
         
         if(!hit.collider.TryGetComponent<Unit>(out Unit unit)){return;}
         
         if(!unit.hasAuthority){return;}
         
-        _selectedUnits.Add(unit);
+        SelectedUnits.Add(unit);
 
-        foreach (Unit selectedUnit in _selectedUnits)
+        foreach (Unit selectedUnit in SelectedUnits)
         {
             selectedUnit.Select();   
         }
