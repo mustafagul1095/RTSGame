@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-public class RTSPlayerMover : NetworkBehaviour
+public class UnitMover : NetworkBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
 
