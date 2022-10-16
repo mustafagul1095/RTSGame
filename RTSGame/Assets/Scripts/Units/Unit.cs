@@ -11,12 +11,23 @@ public class Unit : NetworkBehaviour
     [SerializeField] private UnitMover unitMover;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
+    [SerializeField] private Targeter targeter;
 
     public static event Action<Unit> ServerOnUnitSpawned;
     public static event Action<Unit> ServerOnUnitDespawned;
 
     public static event Action<Unit> AuthorityOnUnitSpawned;
     public static event Action<Unit> AuthorityOnUnitDespawned;
+
+    public UnitMover GetUnitMover()
+    {
+        return unitMover;
+    }
+
+    public Targeter GetTargeter()
+    {
+        return targeter;
+    }
 
     #region Server
 
@@ -32,11 +43,7 @@ public class Unit : NetworkBehaviour
 
     #endregion
 
-    public UnitMover GetUnitMover()
-    {
-        return unitMover;
-    }
-   
+
     #region Client
 
     public override void OnStartClient()

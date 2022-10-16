@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 public class UnitMover : NetworkBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private Targeter _targeter;
 
     private Camera _mainCamera;
 
@@ -26,6 +27,7 @@ public class UnitMover : NetworkBehaviour
     [Command]
     public void CmdMove(Vector3 position)
     {
+        _targeter.ClearTarget();
         if(!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)){return;}
         
         agent.SetDestination(position);
