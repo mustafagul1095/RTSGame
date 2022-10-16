@@ -25,7 +25,7 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.button != PointerEventData.InputButton.Left){return;}
+        if(eventData.button != PointerEventData.InputButton.Middle){return;}
         if(!hasAuthority){return;}
         
         CmdSpawnUnit();
