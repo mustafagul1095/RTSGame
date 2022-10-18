@@ -20,6 +20,21 @@ public class Health : NetworkBehaviour
     public override void OnStartServer()
     {
         _currentHealth = maxHealth;
+        UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
+    }
+
+    public override void OnStopServer()
+    {
+        UnitBase.ServerOnPlayerDie -= ServerHandlePlayerDie;
+    }
+
+    [Server]
+    private void ServerHandlePlayerDie(int connectionId)
+    {
+        if (connectionToClient.connectionId != connectionId)
+        {
+            DealDamage(_currentHealth);
+        }
     }
 
     [Server]
