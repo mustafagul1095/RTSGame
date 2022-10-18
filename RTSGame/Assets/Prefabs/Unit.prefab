@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 4829975769429630297}
   - component: {fileID: 6562660474782659053}
   - component: {fileID: 3061230352536568547}
-  - component: {fileID: 2373875887238045773}
   - component: {fileID: 6711126233541441536}
+  - component: {fileID: 2373875887238045773}
   - component: {fileID: 30381708207231116}
   - component: {fileID: 5188466074820783341}
   - component: {fileID: 1695223894921811927}
@@ -171,6 +171,19 @@ MonoBehaviour:
   agent: {fileID: 6562660474782659053}
   _targeter: {fileID: 5188466074820783341}
   chaseRange: 10
+--- !u!65 &6711126233541441536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379620955459391317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2373875887238045773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,19 +230,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targeter: {fileID: 5188466074820783341}
---- !u!65 &6711126233541441536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379620955459391317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 3}
-  m_Center: {x: 0, y: 1, z: 0}
+  health: {fileID: 4143486412832859651}
 --- !u!114 &30381708207231116
 MonoBehaviour:
   m_ObjectHideFlags: 0
