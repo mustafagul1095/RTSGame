@@ -7,6 +7,8 @@ using UnityEngine;
 public class RTSPlayer : NetworkBehaviour
 {
     [SerializeField] private Building[] buildings = new Building[0];
+    [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
+    [SerializeField] private float buildingRangeLimit = 5f;
     
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
     private int resources = 500;
@@ -29,6 +31,27 @@ public class RTSPlayer : NetworkBehaviour
     public List<Building> GetMyBuildings()
     {
         return _myBuildings;
+    }
+
+    public bool CanPlaceBuilding(BoxCollider buildingCollider, Vector3 point)
+    {
+        if (Physics.CheckBox(point + buildingCollider.center, buildingCollider.size / 2,
+                Quaternion.identity,
+                buildingBlockLayer))
+        {
+            return false;
+        }
+        
+        foreach (Building building in _myBuildings)
+        {
+            if ((point - building.transform.position).sqrMagnitude <= 
+                buildingRangeLimit * buildingRangeLimit)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     [Server]
@@ -69,11 +92,19 @@ public class RTSPlayer : NetworkBehaviour
             }
         }
         if(buildingToPlace == null){return;}
+        
+        if(resources < buildingToPlace.GetPrice()){return;}
+
+        BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
+
+        
+        if(!CanPlaceBuilding(buildingCollider, point)){return;}
 
         GameObject buildingInstance = 
             Instantiate(buildingToPlace.gameObject, point, buildingToPlace.transform.rotation);
         
         NetworkServer.Spawn(buildingInstance, connectionToClient);
+        SetResources(resources - buildingToPlace.GetPrice());
     }
 
     private void ServerHandleUnitSpawned(Unit unit)
