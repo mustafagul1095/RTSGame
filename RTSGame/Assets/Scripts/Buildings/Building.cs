@@ -17,7 +17,10 @@ public class Building : NetworkBehaviour
     public static event Action<Building> AuthorityOnBuildingSpawned;
     public static event Action<Building> AuthorityOnBuildingDespawned;
 
-
+    public int GetId()
+    {
+        return id;
+    }
     public GameObject GetBuildingPreview()
     {
         return buildingPreview;

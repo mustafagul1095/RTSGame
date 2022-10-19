@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class RTSNetworkManager : NetworkManager
 {
-    [SerializeField] private GameObject unitSpawnerPrefab;
+    [SerializeField] private GameObject unitBasePrefab;
     [SerializeField] private GameOverHandler gameOverHandlerPrefab;
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
 
-        GameObject unitSpawnerInstance = Instantiate(unitSpawnerPrefab, 
+        GameObject unitSpawnerInstance = Instantiate(unitBasePrefab, 
             conn.identity.transform.position,
             conn.identity.transform.rotation);
         
