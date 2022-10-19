@@ -52,12 +52,17 @@ public class UnitMover : NetworkBehaviour
     [Command]
     public void CmdMove(Vector3 position)
     {
+        ServerMove(position);
+    }
+
+    [Server]
+    public void ServerMove(Vector3 position)
+    {
         _targeter.ClearTarget();
         if(!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)){return;}
         
         agent.SetDestination(position);
     }
-
     private void ServerHandleGameOver()
     {
         agent.ResetPath();
