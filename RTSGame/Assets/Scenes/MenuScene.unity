@@ -130,44 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: onlineScene
-      value: Assets/Scenes/Scene_Map.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: offlineScene
-      value: Assets/Scenes/MenuScene.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: playerSpawnMethod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: gameOverHandlerPrefab
-      value: 
-      objectReference: {fileID: 5371139798509192109, guid: ce2d48147ee57054c8bed8027e61e314,
-        type: 3}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 5080321127449743376, guid: 745f6d8da940c8748b477457ed65c72a,
-        type: 3}
-    - target: {fileID: 6541722241577444074, guid: a4709952fce4d944e92754d9c2cf897b,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 8255268427321736200, guid: ce2d48147ee57054c8bed8027e61e314,
-        type: 3}
     - target: {fileID: 6541722241577444115, guid: a4709952fce4d944e92754d9c2cf897b,
         type: 3}
       propertyPath: m_Name
