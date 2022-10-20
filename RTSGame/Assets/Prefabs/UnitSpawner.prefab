@@ -62,7 +62,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631889188812617039}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6279996202517013702
 MeshFilter:
@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 4094111959507982712, guid: fac7950b9c9dbfa41a4a62f931b56a57,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4094111959507982712, guid: fac7950b9c9dbfa41a4a62f931b56a57,
         type: 3}
@@ -257,87 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &7976686153220806913
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 631889188812617039}
-    m_Modifications:
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207038791911756056, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6309577899677685421, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-        type: 3}
-      propertyPath: m_Name
-      value: UnitSpawnerPreview
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 12a27d4d55b62b748ad9e3710b4d79fd, type: 3}
---- !u!23 &5441378191783202731 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2680003970835633834, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 7976686153220806913}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6390066940389770389 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3899261642498022804, guid: 12a27d4d55b62b748ad9e3710b4d79fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 7976686153220806913}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8285078150812271694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,7 +273,7 @@ PrefabInstance:
         type: 3}
       propertyPath: colorRenderers.Array.data[0]
       value: 
-      objectReference: {fileID: 5441378191783202731}
+      objectReference: {fileID: 0}
     - target: {fileID: -2882754342708696206, guid: 3ba10f7d5f987074bbb44c18602fc7c7,
         type: 3}
       propertyPath: colorRenderers.Array.data[1]
@@ -527,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  aimAtPoint: {fileID: 6390066940389770389}
+  aimAtPoint: {fileID: 0}
 --- !u!4 &631889188812617039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8808593851461792001, guid: 3ba10f7d5f987074bbb44c18602fc7c7,

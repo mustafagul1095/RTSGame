@@ -61,12 +61,16 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 1
   spawnPrefabs:
-  - {fileID: 3379620955459391317, guid: 218267aba00cec544bd2d287b81a827e, type: 3}
   - {fileID: 425548871081961342, guid: c448f91719a314d4abca6ab285e5deb9, type: 3}
-  - {fileID: 5080321127449743376, guid: 745f6d8da940c8748b477457ed65c72a, type: 3}
   - {fileID: 8255268427321736200, guid: ce2d48147ee57054c8bed8027e61e314, type: 3}
-  - {fileID: 425548871081961342, guid: 4dce9cab84a597343805eb79ec47d251, type: 3}
-  unitSpawnerPrefab: {fileID: 425548871081961342, guid: 4dce9cab84a597343805eb79ec47d251,
+  - {fileID: 425548871081961342, guid: b6fcd63b77b8a014d859509675168fd2, type: 3}
+  - {fileID: 8652387325221497343, guid: 9ca5d50f387871540a3012e2752dcec2, type: 3}
+  - {fileID: 6733919119743261225, guid: 7491649ca2d15d84da12f1eb16228447, type: 3}
+  - {fileID: 7002633067792566260, guid: c655c56786c893b4881cef504808cf05, type: 3}
+  - {fileID: 4177103137652562684, guid: 2e213a8066d94e047b8c869b8c80de4e, type: 3}
+  - {fileID: 7535392032527752271, guid: 12a78574ca1641c48a927e69577b81e2, type: 3}
+  - {fileID: 7355216398597823611, guid: 39b4c3d7589569646bdffb0f88287327, type: 3}
+  unitBasePrefab: {fileID: 425548871081961342, guid: c448f91719a314d4abca6ab285e5deb9,
     type: 3}
   gameOverHandlerPrefab: {fileID: 5371139798509192109, guid: ce2d48147ee57054c8bed8027e61e314,
     type: 3}

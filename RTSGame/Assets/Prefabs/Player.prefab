@@ -183,12 +183,13 @@ MonoBehaviour:
   syncInterval: 0.1
   cameraTransform: {fileID: 1537269184589453265}
   buildings:
-  - {fileID: 5711226322886340686, guid: 4dce9cab84a597343805eb79ec47d251, type: 3}
+  - {fileID: 1717612705254903065, guid: 7491649ca2d15d84da12f1eb16228447, type: 3}
   - {fileID: 5711226322886340686, guid: b6fcd63b77b8a014d859509675168fd2, type: 3}
+  - {fileID: 2465324165935696767, guid: 12a78574ca1641c48a927e69577b81e2, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1281
-  buildingRangeLimit: 5
+  buildingRangeLimit: 20
 --- !u!114 &3805946319548026211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerCameraTransform: {fileID: 1537269184589453265}
-  speed: 25
+  speed: 30
   screenBorderThickness: 10
   screenXLimits: {x: -45, y: 45}
   screenZLimits: {x: -55, y: 35}
