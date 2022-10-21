@@ -100,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 1695223894921811927, guid: 218267aba00cec544bd2d287b81a827e,
         type: 3}
       propertyPath: fireRate
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1695223894921811927, guid: 218267aba00cec544bd2d287b81a827e,
         type: 3}
@@ -127,6 +127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.761
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061230352536568547, guid: 218267aba00cec544bd2d287b81a827e,
+        type: 3}
+      propertyPath: chaseRange
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3379620955459391316, guid: 218267aba00cec544bd2d287b81a827e,
         type: 3}

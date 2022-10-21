@@ -189,7 +189,7 @@ MonoBehaviour:
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1281
-  buildingRangeLimit: 20
+  buildingRangeLimit: 25
 --- !u!114 &3805946319548026211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,5 +207,5 @@ MonoBehaviour:
   playerCameraTransform: {fileID: 1537269184589453265}
   speed: 30
   screenBorderThickness: 10
-  screenXLimits: {x: -45, y: 45}
-  screenZLimits: {x: -55, y: 35}
+  screenXLimits: {x: -55, y: 55}
+  screenZLimits: {x: -65, y: 45}

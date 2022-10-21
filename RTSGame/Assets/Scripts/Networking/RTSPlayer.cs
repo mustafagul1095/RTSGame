@@ -108,7 +108,6 @@ public class RTSPlayer : NetworkBehaviour
         displayName = newDisplayName;
     }
     
-    
     [Server]
     public void SetPartyOwner(bool state)
     {
@@ -239,7 +238,6 @@ public class RTSPlayer : NetworkBehaviour
     private void AuthoityHandlepartyOwnerStateUpdated(bool oldState, bool newState)
     {
         if(!hasAuthority){return;}
-
         AuthorityOnPartOwnerStateUpdated?.Invoke(newState);
     }
     

@@ -24,7 +24,6 @@ public class RTSNetworkManager : NetworkManager
     {
         if(!_isGameInProgress){return;}
         conn.Disconnect();
-        
     }
 
     public override void OnServerDisconnect(NetworkConnectionToClient conn)
@@ -84,7 +83,6 @@ public class RTSNetworkManager : NetworkManager
                 
                 NetworkServer.Spawn(baseInstance, player.connectionToClient);
             }
-            
         }
     }
 
