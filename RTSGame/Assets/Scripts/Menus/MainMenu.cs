@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using Steamworks;
+using TMPro;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
@@ -10,18 +11,19 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject landingPagePanel;
 
     [SerializeField] private bool useSteam;
+    [SerializeField] private TMP_Text debugText;
 
-    protected Callback<LobbyCreated_t> lobbyCreated;
-    protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;
-    protected Callback<LobbyEnter_t> lobbyEntered;
+    protected Callback<LobbyCreated_t> LobbyCreated;
+    protected Callback<GameLobbyJoinRequested_t> GameLobbyJoinRequested;
+    protected Callback<LobbyEnter_t> LobbyEntered;
 
     private void Start()
     {
         if(!useSteam){return;}
 
-        lobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
-        gameLobbyJoinRequested = Callback<GameLobbyJoinRequested_t>.Create(OnGameLobbyJoinRequested);
-        lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
+        LobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
+        GameLobbyJoinRequested = Callback<GameLobbyJoinRequested_t>.Create(OnGameLobbyJoinRequested);
+        LobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
     }
 
     public void HostLobby()
@@ -39,6 +41,7 @@ public class MainMenu : MonoBehaviour
 
     private void OnLobbyCreated(LobbyCreated_t callback)
     {
+        debugText.text = "LobbyCreated";
         if (callback.m_eResult != EResult.k_EResultOK)
         {
             landingPagePanel.SetActive(true);

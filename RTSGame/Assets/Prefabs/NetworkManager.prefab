@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6541722241577444074}
   - component: {fileID: 6541722241577444117}
   - component: {fileID: 766635401}
+  - component: {fileID: 1158540919}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -54,7 +55,7 @@ MonoBehaviour:
   onlineScene: 
   transport: {fileID: 766635401}
   networkAddress: localhost
-  maxConnections: 100
+  maxConnections: 4
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 9146361365504944865, guid: f42337d8b35dedd43af68f6f54f4fea7,
     type: 3}
@@ -119,3 +120,15 @@ MonoBehaviour:
   Timeout: 25
   AllowSteamRelay: 1
   UseNextGenSteamNetworking: 1
+--- !u!114 &1158540919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541722241577444115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5753662027e554d49b1c407f8b38aa7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
